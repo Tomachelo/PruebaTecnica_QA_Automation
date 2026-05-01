@@ -1,6 +1,6 @@
 function baseUrlAPI(){
     let config = {
-        baseUrl: 'https://fakeapi.platzi.com'
+        baseUrl: 'https://api.escuelajs.co/api/v1'
     };
     return config;
 }
