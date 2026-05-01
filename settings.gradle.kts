@@ -1,0 +1,1 @@
+rootProject.name = "Prueba_Tecnica_QA_Backend"
