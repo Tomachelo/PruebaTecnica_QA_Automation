@@ -12,7 +12,7 @@ Feature: Validacion APIs productos PlatziFake
     When method get
     Then status 200
     And match response == '#[]'
-    And match response[0] contains productSchema
+    And match each response contains categorySchema
 
   @api_get_product_by_id
   Scenario: Obtener un producto por id

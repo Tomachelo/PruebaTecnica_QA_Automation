@@ -12,7 +12,7 @@ Feature: Validacion APIs categorias PlatziFake
     When method get
     Then status 200
     And match response == '#[]'
-    And match response[0] contains categorySchema
+    And match each response contains categorySchema
 
   @api_get_category_by_id
   Scenario: Obtener una categoria por id
@@ -20,7 +20,9 @@ Feature: Validacion APIs categorias PlatziFake
     When method get
     Then status 200
     And match response.id == 1
-    And match response contains categorySchema
+    And match response.id == 1
+    And match response.name == '#string'
+    And match response.image == '#string'
 
   @api_post_put_delete_category
   Scenario: Flujo de creacion, actualizacion y eliminacion de categoria
@@ -45,6 +47,10 @@ Feature: Validacion APIs categorias PlatziFake
     Given path 'categories', categoryId
     When method delete
     Then status 200 || status 204
+
+    Given path 'categories', categoryId
+    When method get
+    Then status 400
 
   @api_get_negative_category_non-existent
   Scenario: Obtener una categoria no existente
