@@ -34,13 +34,13 @@ de esquema y filtros.
 
 ## Como ejecutar el proyecto
 
-### Ejecutar todos los test
+### Ejecutar todos los test (Desde raíz del proyecto)
 
 ```bash
 ./gradlew test
 ```
 
-### Ejecutar runner principal
+### Ejecutar runner principal (Desde raíz del proyecto)
 
 ```bash
 ./gradlew test --tests runners.GeneralRunner
@@ -97,6 +97,28 @@ build/karate-reports/karate-summary.html
 ---
 
 ## Entregable preguntas
+- a. ¿Cuáles fueron los principales desafíos que enfrentaste al implementar las funcionalidades?
+
+Respuesta: Uno de los principales desafios fue manejar datos dinamicos para evitar dependencias entre los escenarios para que se pudiera
+realizar una regresión completa de los features. Además fue necesario estructurar correctamente los casos de prueba para cubrir multiples
+endpoints sin duplicar la lógica.
+
+- b. ¿Qué técnicas de pruebas se usaron y qué enfoque se le dio a la automatización?
+
+Respuesta: Aplique pruebas funcionales de API en base ha caja negra, validando unicamente las entradas y salidas del sistema. También
+se implemente pruebas positivas y negativas, validación de códigos HTTP, validación de contratos mediante JSON y pruebas de filtros.
+Todo esto asegurando estabiliad y comportamiento esperado de los servicios.
+
+- c. ¿Cómo gestionaste la validación de datos y la verificación de la estructura de las respuestas JSON en tus pruebas automatizadas?
+
+Respuesta: La validación de datos se hizo bajo JSON Schema para asegurar la estructura de las respuestas sea consistente, además use
+archivos de datos reutilizables para parametrizar las pruebas y evitar la duplicación y el hardcode de data. Karate me permitio 
+validar tipos de datos, estructuras de listas y campos obligatorios.
+
+- d. ¿Qué aprendizajes obtuviste al desarrollar esta prueba técnica y cómo consideras que aportan a tu crecimiento profesional?
+
+Respuesta: Me fortalecio el uso de Karate Framework para automatización de APIs y la importancia de estructuras proyectos de forma
+estable, también reforce buenas prácticas como idependencia de escenarios, reutilización de componentes y validación de contratos.
 
 ---
 
