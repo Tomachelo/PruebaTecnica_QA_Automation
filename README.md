@@ -94,5 +94,11 @@ El reporte HTML se genera en:
 build/karate-reports/karate-summary.html
 ```
 
+---
+
+## Entregable preguntas
+
+---
+
 ## Autor 
 Tomas Del Piero Amortegui Duarte
